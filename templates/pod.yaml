@@ -10,6 +10,6 @@ spec:
     - name: {{ .Values.name }}
       image: public.ecr.aws/w8x4g9h7/roboshop-v3/{{ .Values.name }}
       env:
-        {{ include "toYaml" $.Values.env | indent 8 }}
+        {{- toYaml .Values.env | nindent 8 }}
 
 
