@@ -1,4 +1,5 @@
 name: user
+port: 8080
 env:
   - name: MONGO_URL
     value: "mongodb://mongo.dev.rdevopsb80.online:27017/users"

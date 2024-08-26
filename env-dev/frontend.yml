@@ -1,5 +1,5 @@
 serviceType: LoadBalancer
-
+port: 80
 name: frontend
 env:
   - name: CATALOGUE_HOST
