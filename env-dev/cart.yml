@@ -1,0 +1,10 @@
+name: cart
+env:
+  - name: CATALOGUE_HOST
+    value: "catalogue"
+  - name: CATALOGUE_PORT
+    value: "8080"
+  - name: REDIS_HOST
+    value: 'redis.dev.rdevopsb80.online'
+
+

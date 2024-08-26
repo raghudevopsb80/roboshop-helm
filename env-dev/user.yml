@@ -1,0 +1,11 @@
+name: user
+env:
+  - name: MONGO_URL
+    value: "mongodb://mongo.dev.rdevopsb80.online:27017/users"
+  - name: MONGO
+    value: "true"
+  - name: REDIS_URL
+    value: 'redis://redis.dev.rdevopsb80.online:6379'
+
+
+

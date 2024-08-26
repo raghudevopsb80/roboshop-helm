@@ -1,0 +1,9 @@
+name: shipping
+env:
+  - name: CART_ENDPOINT
+    value: "cart:8080"
+  - name: DB_HOST
+    value: "mysql.dev.rdevopsb80.online"
+
+
+
