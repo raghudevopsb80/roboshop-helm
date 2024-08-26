@@ -13,7 +13,9 @@ spec:
         - name: {{ $k }}
           image: public.ecr.aws/w8x4g9h7/roboshop-v3/schema-load
           env:
-            {{- toYaml $.Values.schema.env | nindent 10 }}
+            {{- toYaml $.Values.schema.env | nindent 12 }}
+            - name: SCHEMA_FILE
+              value: db/{{ $v }}
         {{- end }}
       restartPolicy: Never
   backoffLimit: 0
