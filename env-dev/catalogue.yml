@@ -8,6 +8,8 @@ env:
 
 schema:
   enabled: true
+  containers:
+    master-data: master-data.js
   env:
     - name: DB_TYPE
       value: mongo
@@ -15,6 +17,5 @@ schema:
       value: "https://github.com/roboshop-devops-project-v3/catalogue"
     - name: DB_HOST
       value: mongo.dev.rdevopsb80.online
-    - name: SCHEMA_FILE
-      value: db/master-data.js
+
 
