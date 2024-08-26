@@ -7,4 +7,22 @@ env:
     value: "mysql.dev.rdevopsb80.online"
 
 
+schema:
+  enabled: true
+  containers:
+    master-data: master-data.sql
+    schema: schema.sql
+    app-user: app-user.sql
+  env:
+    - name: DB_TYPE
+      value: mysql
+    - name: APP_GIT_URL
+      value: "https://github.com/roboshop-devops-project-v3/shipping"
+    - name: DB_HOST
+      value: "mysql.dev.rdevopsb80.online"
+    - name: DB_USER
+      value: root
+    - name: DB_PASS
+      value: RoboShop@1
+
 
