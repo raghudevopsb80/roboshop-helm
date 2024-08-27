@@ -11,11 +11,10 @@ spec:
       containers:
         {{- range $k, $v := .Values.schema.containers }}
         - name: {{ $k }}
-          image: public.ecr.aws/w8x4g9h7/roboshop-v3/schema-load
+          image: 633788536644.dkr.ecr.us-east-1.amazonaws.com/schema-load:latest
+          imagePullPolicy: Always
           env:
             {{- toYaml $.Values.schema.env | nindent 12 }}
-            - name: SCHEMA_FILE
-              value: db/{{ $v }}
         {{- end }}
       restartPolicy: Never
   backoffLimit: 0
