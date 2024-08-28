@@ -8,7 +8,8 @@ spec:
   containers:
     - name: {{ .Values.name }}
       image: public.ecr.aws/w8x4g9h7/roboshop-v3/{{ .Values.name }}
-      env:
-        {{- toYaml .Values.env | nindent 8 }}
+      envFrom:
+      - secretRef:
+          name: {{ .Values.name }}
 
 
