@@ -5,6 +5,8 @@ metadata:
   name: {{ .Values.name }}-schema
   labels:
     appName: {{ .Values.name }}
+  annotations:
+    helm.sh/hook: pre-install
 spec:
   template:
     spec:
