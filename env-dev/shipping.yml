@@ -6,4 +6,11 @@ schema:
 
 replicas: 1
 
+resources:
+  requests:
+    memory: "1500Mi"
+    cpu: "500m"
+  limits:
+    memory: "2048Mi"
+    cpu: "750m"
 
