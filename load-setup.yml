@@ -1,0 +1,26 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: load-setup
+  labels:
+    appName: load-setup
+spec:
+  template:
+    spec:
+      containers:
+        - name: load-setup
+          image: docker.io/robotshop/rs-load
+          env:
+            - name: HOST
+              value: "http://frontend"
+            - name: NUM_CLIENTS
+              value: "10"
+            - name: RUN_TIME
+              value: "5m"
+            - name: ERROR
+              value: "0"
+            - name: SILENT
+              value: "1"
+      restartPolicy: Never
+  backoffLimit: 0
+
