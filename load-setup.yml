@@ -20,7 +20,7 @@ spec:
             - name: ERROR
               value: "0"
             - name: SILENT
-              value: "1"
+              value: "0"
       restartPolicy: Never
   backoffLimit: 0
 ## In order this job to work, we need to create a user in roboshop project with username and password as user/password
