@@ -1,6 +1,7 @@
 name: payment
 port: 8080
 replicas: 1
+env: dev
 
 resources:
   requests:

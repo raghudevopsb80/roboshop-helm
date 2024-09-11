@@ -6,6 +6,7 @@ schema:
   enabled: true
 
 replicas: 1
+env: dev
 
 resources:
   requests:
