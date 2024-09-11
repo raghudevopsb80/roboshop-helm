@@ -2,6 +2,7 @@ name: payment
 port: 8080
 replicas: 1
 env: dev
+logType: raw
 
 resources:
   requests:

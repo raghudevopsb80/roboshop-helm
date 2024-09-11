@@ -1,5 +1,6 @@
 name: catalogue
 port: 8080
+logType: json
 
 
 schema:

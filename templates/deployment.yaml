@@ -4,6 +4,7 @@ metadata:
   name: {{ .Values.name }}
   labels:
     appName: {{ .Values.name }}
+    logType: {{ .Values.logType }}
 spec:
   replicas: {{ .Values.replicas }}
   selector:
