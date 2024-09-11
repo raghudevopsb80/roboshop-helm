@@ -12,6 +12,10 @@ resources:
     memory: "64Mi"
     cpu: "50m"
 
+ingress:
+  enabled: true
+  host: frontend-dev.rdevopsb80.online
+
 
 
 
