@@ -1,6 +1,9 @@
 name: catalogue
 port: 8080
-logType: json
+labels:
+  appName: catalogue
+  logType: json
+  appType: nodejs
 
 
 schema:

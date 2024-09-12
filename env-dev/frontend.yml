@@ -2,7 +2,10 @@ port: 80
 name: frontend
 replicas: 1
 env: dev
-logType: raw
+labels:
+  appName: frontend
+  logType: raw
+  appType: nginx
 
 resources:
   requests:

@@ -3,8 +3,7 @@ kind: Deployment
 metadata:
   name: {{ .Values.name }}
   labels:
-    appName: {{ .Values.name }}
-    logType: {{ .Values.logType }}
+    {{ toYaml .Values.labels | nindent 4 }}
 spec:
   replicas: {{ .Values.replicas }}
   selector:
@@ -13,8 +12,7 @@ spec:
   template:
     metadata:
       labels:
-        appName: {{ .Values.name }}
-        logType: {{ .Values.logType }}
+        {{ toYaml .Values.labels | nindent 8 }}
     spec:
       containers:
       - name: {{ .Values.name }}-{{ .Values.env }}

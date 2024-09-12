@@ -2,7 +2,10 @@ name: cart
 port: 8080
 replicas: 1
 env: dev
-logType: json
+labels:
+  appName: cart
+  logType: json
+  appType: nodejs
 
 resources:
   requests:

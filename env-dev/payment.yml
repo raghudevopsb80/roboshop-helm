@@ -2,7 +2,10 @@ name: payment
 port: 8080
 replicas: 1
 env: dev
-logType: raw
+labels:
+  appName: payment
+  logType: raw
+  appType: python
 
 resources:
   requests:
