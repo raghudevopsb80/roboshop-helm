@@ -2,7 +2,7 @@ name: shipping
 port: 8080
 labels:
   appName: shipping
-  logType: json
+  logType: raw
   appType: java
 
 schema:
