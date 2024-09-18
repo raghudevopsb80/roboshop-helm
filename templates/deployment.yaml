@@ -17,6 +17,7 @@ spec:
       containers:
       - name: {{ .Values.name }}-{{ .Values.env }}
         image: public.ecr.aws/w8x4g9h7/roboshop-v3/{{ .Values.name }}:newrelic
+        imagePullPolicy: Always
         ports:
         - containerPort: {{ .Values.port }}
         envFrom:
