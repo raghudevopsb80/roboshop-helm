@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: {{ .Values.name }}-{{ .Values.env }}
-        image: public.ecr.aws/w8x4g9h7/roboshop-v3/{{ .Values.name }}:newrelic
+        image: 633788536644.dkr.ecr.us-east-1.amazonaws.com/roboshop-{{ .Values.name }}:{{ .Values.appVersion }}
         imagePullPolicy: Always
         ports:
         - containerPort: {{ .Values.port }}
