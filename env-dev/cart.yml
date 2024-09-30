@@ -15,5 +15,5 @@ resources:
     memory: "128Mi"
     cpu: "50m"
 
-
+appVersion: "1.0.1"
 
