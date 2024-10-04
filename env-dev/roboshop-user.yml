@@ -1,6 +1,6 @@
 name: user
 port: 8080
-replicas: 1
+replicas: 2
 env: dev
 labels:
   appName: user

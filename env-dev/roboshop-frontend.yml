@@ -1,6 +1,6 @@
 port: 80
 name: frontend
-replicas: 1
+replicas: 2
 env: dev
 labels:
   appName: frontend
