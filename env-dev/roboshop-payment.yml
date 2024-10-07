@@ -10,10 +10,10 @@ labels:
 resources:
   requests:
     memory: "128Mi"
-    cpu: "30m"
+    cpu: "100m"
   limits:
     memory: "256Mi"
-    cpu: "50m"
+    cpu: "200m"
 
 
 
