@@ -37,5 +37,6 @@ spec:
             port: {{ .Values.port }}
           initialDelaySeconds: 30
           periodSeconds: 30
+          failureThreshold: 3
 
 
