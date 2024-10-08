@@ -15,5 +15,8 @@ resources:
     memory: "256Mi"
     cpu: "350m"
 
+probes:
+  initialDelaySeconds: 30
+
 
 

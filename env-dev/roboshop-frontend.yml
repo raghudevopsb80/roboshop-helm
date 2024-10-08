@@ -19,6 +19,9 @@ ingress:
   enabled: true
   host: frontend-dev.rdevopsb80.online
 
+probes:
+  initialDelaySeconds: 30
+
 
 
 

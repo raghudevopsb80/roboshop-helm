@@ -19,3 +19,8 @@ resources:
     memory: "2048Mi"
     cpu: "750m"
 
+probes:
+  initialDelaySeconds: 120
+
+
+
