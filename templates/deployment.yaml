@@ -25,3 +25,17 @@ spec:
             name: {{ .Values.name }}
         resources:
           {{ toYaml .Values.resources | nindent 10 }}
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: {{ .Values.port }}
+          initialDelaySeconds: 3
+          periodSeconds: 3
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: {{ .Values.port }}
+          initialDelaySeconds: 30
+          periodSeconds: 30
+
+
