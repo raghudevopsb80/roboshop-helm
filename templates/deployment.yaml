@@ -38,5 +38,7 @@ spec:
           initialDelaySeconds: {{ .Values.probes.initialDelaySeconds }}
           periodSeconds: 30
           failureThreshold: 3
+        securityContext:
+          readOnlyRootFilesystem: true
 
 
