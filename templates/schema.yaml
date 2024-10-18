@@ -15,6 +15,8 @@ spec:
         - name: {{ .Values.name }}-schema
           image: 633788536644.dkr.ecr.us-east-1.amazonaws.com/schema-load:{{ .Values.name }}
           imagePullPolicy: Always
+          securityContext:
+            readOnlyRootFilesystem: true
           envFrom:
           - secretRef:
               name: {{ .Values.name }}
