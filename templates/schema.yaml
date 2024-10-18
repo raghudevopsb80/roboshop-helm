@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: {{ .Values.name }}-schema
-          image: 633788536644.dkr.ecr.us-east-1.amazonaws.com/schema-load:latest
+          image: 633788536644.dkr.ecr.us-east-1.amazonaws.com/schema-load:{{ .Values.name }}
           imagePullPolicy: Always
           envFrom:
           - secretRef:
