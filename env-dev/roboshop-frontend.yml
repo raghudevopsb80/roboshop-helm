@@ -22,6 +22,8 @@ ingress:
 probes:
   initialDelaySeconds: 30
 
+securityContext:
+  readOnlyRootFilesystem: false
 
 
 

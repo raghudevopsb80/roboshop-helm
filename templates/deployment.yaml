@@ -39,6 +39,6 @@ spec:
           periodSeconds: 30
           failureThreshold: 3
         securityContext:
-          readOnlyRootFilesystem: true
+          readOnlyRootFilesystem: {{ .Values.securityContext.readOnlyRootFilesystem }}
 
 
