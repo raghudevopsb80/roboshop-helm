@@ -22,8 +22,6 @@ resources:
 probes:
   initialDelaySeconds: 120
 
-securityContext:
-  readOnlyRootFilesystem: false
 
 
 
