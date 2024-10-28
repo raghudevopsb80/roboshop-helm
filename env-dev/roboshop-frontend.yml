@@ -6,7 +6,7 @@ labels:
   appName: frontend
   logType: raw
   appType: nginx
-  istio-injection: disabled
+  sidecar.istio.io/inject: "false"
 
 resources:
   requests:
