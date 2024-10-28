@@ -1,0 +1,31 @@
+apiVersion: security.istio.io/v1
+kind: AuthorizationPolicy
+metadata:
+ name: allow-debug
+spec:
+  selector:
+    matchLabels:
+      appName: nginx
+  action: ALLOW
+  rules:
+  - from:
+    - source:
+        principals: ["cluster.local/ns/default/sa/debug1"]
+  - to:
+    - operation:
+        paths: ["/"]
+---
+apiVersion: security.istio.io/v1
+kind: AuthorizationPolicy
+metadata:
+  name: deny-others
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      appName: nginx
+  action: DENY
+  rules:
+  - from:
+    - source:
+        notPrincipals: ["cluster.local/ns/default/sa/debug1"]
