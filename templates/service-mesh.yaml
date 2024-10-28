@@ -1,16 +1,25 @@
+---
+apiVersion: security.istio.io/v1beta1
+kind: PeerAuthentication
+metadata:
+  name: {{ .Values.name }}
+spec:
+  mtls:
+    mode: STRICT  # Enforce mTLS for all services in this namespace
+---
 apiVersion: security.istio.io/v1
 kind: AuthorizationPolicy
 metadata:
- name: allow-debug
+ name: {{ .Values.name }}-allow
 spec:
   selector:
     matchLabels:
-      appName: nginx
+      appName: {{ .Values.name }}
   action: ALLOW
   rules:
   - from:
     - source:
-        principals: ["cluster.local/ns/default/sa/debug1"]
+        principals: {{ .Values.istio.principals }}
   - to:
     - operation:
         paths: ["/"]
@@ -18,14 +27,13 @@ spec:
 apiVersion: security.istio.io/v1
 kind: AuthorizationPolicy
 metadata:
-  name: deny-others
-  namespace: default
+  name: {{ .Values.name }}-deny
 spec:
   selector:
     matchLabels:
-      appName: nginx
+      appName: {{ .Values.name }}
   action: DENY
   rules:
   - from:
     - source:
-        notPrincipals: ["cluster.local/ns/default/sa/debug1"]
+        notPrincipals: {{ .Values.istio.principals }}
