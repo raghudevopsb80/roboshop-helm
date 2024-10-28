@@ -6,6 +6,7 @@ labels:
   appName: frontend
   logType: raw
   appType: nginx
+  istio-injection: disabled
 
 resources:
   requests:
