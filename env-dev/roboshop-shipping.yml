@@ -25,5 +25,9 @@ probes:
 istio:
   principals: ["cluster.local/ns/default/sa/frontend"]
 
+securityContext:
+  readOnlyRootFilesystem: false
+
+
 
 
