@@ -10,4 +10,6 @@ appVersion: "0.0.0"
 securityContext:
   readOnlyRootFilesystem: true
 
+istio:
+  enabled: true
 

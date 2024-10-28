@@ -27,4 +27,5 @@ securityContext:
 
 
 istio:
-  principals: ["*"]
+  enabled: false
+

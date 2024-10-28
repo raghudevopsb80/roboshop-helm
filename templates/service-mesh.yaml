@@ -1,3 +1,4 @@
+{{- if .Values.schema.enabled -}}
 ---
 apiVersion: security.istio.io/v1beta1
 kind: PeerAuthentication
@@ -37,3 +38,4 @@ spec:
   - from:
     - source:
         notPrincipals: {{ .Values.istio.principals }}
+{{- end -}}
