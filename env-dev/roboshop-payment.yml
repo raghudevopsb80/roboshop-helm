@@ -18,5 +18,6 @@ resources:
 probes:
   initialDelaySeconds: 30
 
-
+istio:
+  principals: ["cluster.local/ns/default/sa/frontend"]
 
