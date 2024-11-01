@@ -21,9 +21,6 @@ spec:
   - from:
     - source:
         principals: {{ .Values.istio.principals }}
-  - to:
-    - operation:
-        paths: ["/"]
 ---
 apiVersion: security.istio.io/v1
 kind: AuthorizationPolicy
