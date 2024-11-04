@@ -21,9 +21,7 @@ spec:
   - from:
     - source:
       principals:
-        {{- range .Values.istio.principals }}
-        - {{ . | quote }}
-        {{- end }}
+        - {{ .Values.istio.principals }}
 ---
 apiVersion: security.istio.io/v1
 kind: AuthorizationPolicy
