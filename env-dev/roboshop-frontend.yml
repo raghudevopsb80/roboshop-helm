@@ -6,7 +6,6 @@ labels:
   appName: frontend
   logType: raw
   appType: nginx
-  sidecar.istio.io/inject: "true"
 
 resources:
   requests:
