@@ -6,7 +6,7 @@ metadata:
   name: {{ .Values.name }}
 spec:
   mtls:
-    mode: STRICT  # Enforce mTLS for all services in this namespace
+    mode: PERMISSIVE
 ---
 apiVersion: security.istio.io/v1
 kind: AuthorizationPolicy
