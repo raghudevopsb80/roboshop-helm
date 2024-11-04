@@ -27,5 +27,5 @@ securityContext:
 
 
 istioAuthorization:
-  enabled: true
+  enabled: false
 
