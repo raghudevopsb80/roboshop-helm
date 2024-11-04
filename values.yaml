@@ -13,3 +13,5 @@ securityContext:
 istioAuthorization:
   enabled: true
 
+istio:
+  principals: []
