@@ -28,5 +28,5 @@ securityContext:
 
 
 istio:
-  enabled: false
+  enabled: true
 
