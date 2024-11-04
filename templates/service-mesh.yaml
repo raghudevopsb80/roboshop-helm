@@ -24,18 +24,4 @@ spec:
           {{- range .Values.istio.principals }}
           - {{ . | quote }}
           {{- end }}
----
-apiVersion: security.istio.io/v1
-kind: AuthorizationPolicy
-metadata:
-  name: {{ .Values.name }}-deny
-spec:
-  selector:
-    matchLabels:
-      appName: {{ .Values.name }}
-  action: DENY
-  rules:
-  - from:
-    - source:
-        notPrincipals: {{ .Values.istio.principals }}
 {{- end -}}
