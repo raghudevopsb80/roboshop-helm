@@ -20,7 +20,10 @@ spec:
   rules:
   - from:
     - source:
-        principals: {{ .Values.istio.principals }}
+      principals:
+        {{- range .Values.istio.principals }}
+        - {{ . | quote }}
+        {{- end }}
 ---
 apiVersion: security.istio.io/v1
 kind: AuthorizationPolicy
