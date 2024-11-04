@@ -26,6 +26,6 @@ securityContext:
   readOnlyRootFilesystem: false
 
 
-istio:
+istioAuthorization:
   enabled: true
 
